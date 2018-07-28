@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="test/jasmine.css">
+    <script src="test/jasmine.js"></script>
+    <script src="test/jasmine-html.js"></script>
+    <script src="test/boot.js"></script>
+    <script src="test/jquery.min.js"></script>
+    <script src="modules.js"></script>
+</head>
+<body>
+    
+    <script> 
+        
+        describe('extraccion de datos', ()=> {
+        it('obtiene un título', () => {
+            const examplePost = {
+                title: {
+                    rendered: 'AMLO propone a Manuel Bartlett y Octavio Romero como directores de CFE y Pemex'
+                }
+            }
+            const expected = 'AMLO propone a Manuel Bartlett y Octavio Romero como directores de CFE y Pemex'
+            const actual = getTitle(examplePost) //examplePost.title.rendered
+            expect(actual).toEqual(expected)
+            })
+        
+
+        //it('obtine un array de títulos', ()=> {})
+        
+        // it('obten título 2daparte', () => {
+        //     const theNew = {
+        //     posts = [
+        //             {title: {rendered: 'Flexibilidad en TLCAN, mensaje que envía el equipo de AMLO a Trump'}},
+        //             {title: {rendered: 'Esto cuestan las consultas del IMSS para no afiliados'}},
+        //             {title: {rendered: 'Grupo Monterrey y AMLO sostienen una “muy buena reunión'}}
+        //         ];
+        //         }
+        //     const expected2 = post;
+        //     const actual2 = getTitle(theNew) //examplePost.title.rendered
+        //     expect(actual2).toEqual(expected2)
+        //     })
+        })  </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script> -->
+    <!-- <script src="js/app.js"></script> -->
+    
+</body>
+</html>
