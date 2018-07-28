@@ -29,20 +29,24 @@
             })
         
 
-        //it('obtine un array de títulos', ()=> {})
+     
         
-        // it('obten título 2daparte', () => {
-        //     const theNew = {
-        //     posts = [
-        //             {title: {rendered: 'Flexibilidad en TLCAN, mensaje que envía el equipo de AMLO a Trump'}},
-        //             {title: {rendered: 'Esto cuestan las consultas del IMSS para no afiliados'}},
-        //             {title: {rendered: 'Grupo Monterrey y AMLO sostienen una “muy buena reunión'}}
-        //         ];
-        //         }
-        //     const expected2 = post;
-        //     const actual2 = getTitle(theNew) //examplePost.title.rendered
-        //     expect(actual2).toEqual(expected2)
-        //     })
+        it('obten título 2daparte', () => {
+            
+          const  posts = [
+                    {title: {rendered: 'Flexibilidad en TLCAN, mensaje que envía el equipo de AMLO a Trump'}},
+                    {title: {rendered: 'Esto cuestan las consultas del IMSS para no afiliados'}},
+                    {title: {rendered: 'Grupo Monterrey y AMLO sostienen una “muy buena reunión'}}
+                ]
+                
+            const expected = [
+              'Flexibilidad en TLCAN, mensaje que envía el equipo de AMLO a Trump',
+              'Esto cuestan las consultas del IMSS para no afiliados',
+              'Grupo Monterrey y AMLO sostienen una “muy buena reunión'
+            ];
+            const actual = getPostTitles(posts) //examplePost.title.rendered
+            expect(actual).toEqual(expected)
+            })
         })  </script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script> -->
